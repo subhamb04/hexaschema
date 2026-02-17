@@ -1,0 +1,5469 @@
+{
+    "table_name": "R5EVENTS",
+    "module": "WORK",
+    "columns": [
+        {
+            "name": "EVT_CODE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "unique event code"
+        },
+        {
+            "name": "EVT_DESC",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "description, comment"
+        },
+        {
+            "name": "EVT_TYPE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "event type ( user defined ). class"
+        },
+        {
+            "name": "EVT_RTYPE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "corresponding system type"
+        },
+        {
+            "name": "EVT_DATE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "event date"
+        },
+        {
+            "name": "EVT_STATUS",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Status",
+            "status_codes": [
+                { "code": "A", "evt_rstatus": "A", "description": "Awaiting Release" },
+                { "code": "ASG", "evt_rstatus": "R", "description": "Assigned" },
+                { "code": "B", "evt_rstatus": "B", "description": "Bypassed due to nesting" },
+                { "code": "C", "evt_rstatus": "C", "description": "Reviewed and Closed" },
+                { "code": "CANC", "evt_rstatus": "C", "description": "Cancelled" },
+                { "code": "CNA", "evt_rstatus": "C", "description": "Closed, No Action Taken" },
+                { "code": "HLD", "evt_rstatus": "R", "description": "Hold" },
+                { "code": "IP", "evt_rstatus": "R", "description": "In Progress" },
+                { "code": "NAT", "evt_rstatus": "R", "description": "No Action Taken" },
+                { "code": "PEA", "evt_rstatus": "R", "description": "PM Extension Approved" },
+                { "code": "PEJ", "evt_rstatus": "R", "description": "PM Extension Rejected" },
+                { "code": "PER", "evt_rstatus": "R", "description": "PM Extension Requested" },
+                { "code": "PLA", "evt_rstatus": "R", "description": "Waiting for Planning" },
+                { "code": "Q", "evt_rstatus": "Q", "description": "Work Request" },
+                { "code": "QAR", "evt_rstatus": "C", "description": "QA Reviewed & Closed" },
+                { "code": "R", "evt_rstatus": "R", "description": "Released" },
+                { "code": "REJ", "evt_rstatus": "C", "description": "Rejected" },
+                { "code": "RS", "evt_rstatus": "R", "description": "Ready for Scheduling" },
+                { "code": "S", "evt_rstatus": "R", "description": "Scheduled" },
+                { "code": "WC", "evt_rstatus": "R", "description": "Work Complete" },
+                { "code": "WCA", "evt_rstatus": "R", "description": "Work Complete - Awaiting Documentation" }
+            ]
+        },
+        {
+            "name": "EVT_RSTATUS",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },{ "code": "*", "description": "Default work order type" },
+            { "code": "ADMIN", "description": "Administrative" },
+            { "code": "BR", "description": "Breakdown" },
+            { "code": "CAL", "description": "Calibration" },
+            { "code": "CM", "description": "Corrective Maintenance" },
+            { "code": "COM", "description": "Commissioning WO" },
+            { "code": "FCAL", "description": "Follow Up Calibration" },
+            { "code": "FCM", "description": "Follow Up Work Order" },
+            { "code": "IS", "description": "Direct Issue" },
+            { "code": "MEC", "description": "Multiple Equipment Child" },
+            { "code": "OPS", "description": "Operational Support" },
+            { "code": "PDM", "description": "Predictive Maintenance" },
+            { "code": "PM", "description": "Preventive Maintenance" },
+            { "code": "PMCAL", "description": "PM Calibration" },
+            { "code": "PROJ", "description": "Project" },
+            { "code": "RP", "description": "Repairable Spare" },
+            { "code": "ST", "description": "Standing WO" }
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "corresponding system status"
+        },
+        {
+            "name": "EVT_MRC",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "mrc"
+        },
+        {
+            "name": "EVT_LTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "location type"
+        },
+        {
+            "name": "EVT_LOCATION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "location code"
+        },
+        {
+            "name": "EVT_COSTCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Cost Code"
+        },
+        {
+            "name": "EVT_PRINTED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Printed"
+        },
+        {
+            "name": "EVT_PROJECT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "project code"
+        },
+        {
+            "name": "EVT_PROJBUD",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "project budget code"
+        },
+        {
+            "name": "EVT_OBTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "user object type"
+        },
+        {
+            "name": "EVT_OBRTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "system object type"
+        },
+        {
+            "name": "EVT_OBJECT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "object code"
+        },
+        {
+            "name": "EVT_STANDWORK",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "standard workorder code"
+        },
+        {
+            "name": "EVT_PPM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "ppm code"
+        },
+        {
+            "name": "EVT_FREQ",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "frequency"
+        },
+        {
+            "name": "EVT_ISSTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "if filled then variable else fixed default f"
+        },
+        {
+            "name": "EVT_METER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "meter code"
+        },
+        {
+            "name": "EVT_METERDUE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "meter value"
+        },
+        {
+            "name": "EVT_CLASS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "class"
+        },
+        {
+            "name": "EVT_ROUTE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "new routing code not yet used"
+        },
+        {
+            "name": "EVT_SESSION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "planning session number"
+        },
+        {
+            "name": "EVT_SCHEDNO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 5,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 5,
+                "scale": 0
+            },
+            "description": "schedule sequence number"
+        },
+        {
+            "name": "EVT_PLANPRIO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "planning priority"
+        },
+        {
+            "name": "EVT_FIXED",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "fixed or not ? flag"
+        },
+        {
+            "name": "EVT_SLACK",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 5,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 5,
+                "scale": 0
+            },
+            "description": "days slack after planning"
+        },
+        {
+            "name": "EVT_TARGET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Sched. Start Date"
+        },
+        {
+            "name": "EVT_NEWTARGET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "new target date"
+        },
+        {
+            "name": "EVT_EARLYSTART",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "earliest start date"
+        },
+        {
+            "name": "EVT_LATEEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "latest end date"
+        },
+        {
+            "name": "EVT_MUSTEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "must end before date"
+        },
+        {
+            "name": "EVT_LASTPLAN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "last planned date"
+        },
+        {
+            "name": "EVT_DURATION",
+            "nullable": false,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "duration"
+        },
+        {
+            "name": "EVT_NEWDUR",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "new duration"
+        },
+        {
+            "name": "EVT_PLANSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "plan status"
+        },
+        {
+            "name": "EVT_PARENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "parent of job"
+        },
+        {
+            "name": "EVT_DEPEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "filled job cannot be compl. unless"
+        },
+        {
+            "name": "EVT_ORIGIN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Requested By"
+        },
+        {
+            "name": "EVT_REQM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "Problem Code"
+        },
+        {
+            "name": "EVT_CAUSE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "what caused the failure"
+        },
+        {
+            "name": "EVT_ACTION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "action code"
+        },
+        {
+            "name": "EVT_JOBTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "new type of job",
+            "job_types": [
+                { "code": "*", "description": "Default work order type" },
+                { "code": "ADMIN", "description": "Administrative" },
+                { "code": "BR", "description": "Breakdown" },
+                { "code": "CAL", "description": "Calibration" },
+                { "code": "CM", "description": "Corrective Maintenance" },
+                { "code": "COM", "description": "Commissioning WO" },
+                { "code": "FCAL", "description": "Follow Up Calibration" },
+                { "code": "FCM", "description": "Follow Up Work Order" },
+                { "code": "IS", "description": "Direct Issue" },
+                { "code": "MEC", "description": "Multiple Equipment Child" },
+                { "code": "OPS", "description": "Operational Support" },
+                { "code": "PDM", "description": "Predictive Maintenance" },
+                { "code": "PM", "description": "Preventive Maintenance" },
+                { "code": "PMCAL", "description": "PM Calibration" },
+                { "code": "PROJ", "description": "Project" },
+                { "code": "RP", "description": "Repairable Spare" },
+                { "code": "ST", "description": "Standing WO" }
+            ]
+        },
+        {
+            "name": "EVT_PRIORITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "Priority"
+        },
+        {
+            "name": "EVT_REPORTED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "date/time reported"
+        },
+        {
+            "name": "EVT_START",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "actual start date"
+        },
+        {
+            "name": "EVT_MATAVAIL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "date that materials are available"
+        },
+        {
+            "name": "EVT_DUE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "due date"
+        },
+        {
+            "name": "EVT_COMPLETED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "date/time of completion"
+        },
+        {
+            "name": "EVT_DOWNTIME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "downtime"
+        },
+        {
+            "name": "EVT_LABTOTAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "total labor costs"
+        },
+        {
+            "name": "EVT_MATTOTAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "total materials costs"
+        },
+        {
+            "name": "EVT_SHIFT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Shift"
+        },
+        {
+            "name": "EVT_FAILUREUSAGE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Last Meter Reading"
+        },
+        {
+            "name": "EVT_METERREADING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "meter reading at which planned preventive maintenance job is due."
+        },
+        {
+            "name": "EVT_METUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Last Meter Reading UOM"
+        },
+        {
+            "name": "EVT_MAXCOST",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "maximum value/cost of job."
+        },
+        {
+            "name": "EVT_SCREENER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "username of screener."
+        },
+        {
+            "name": "EVT_ROUTEDFROM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "username of screener who routed this job."
+        },
+        {
+            "name": "EVT_ROUTEREASON",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 240
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 240
+            },
+            "description": "comments describing why job was rerouted."
+        },
+        {
+            "name": "EVT_WARRANTY",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "value is + if work is warranty related."
+        },
+        {
+            "name": "EVT_OKWINEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "end date of ok window of ppm job."
+        },
+        {
+            "name": "EVT_NEARWINSTART",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "start date of near window of ppm job."
+        },
+        {
+            "name": "EVT_GENWINSTART",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "start date of release window of ppm job."
+        },
+        {
+            "name": "EVT_OKWINENDVAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "reading at which ok window of ppm job ends."
+        },
+        {
+            "name": "EVT_NEARWINBEGVAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "reading at which near window of ppm job starts."
+        },
+        {
+            "name": "EVT_GENWINBEGVAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "reading at which release window of ppm job starts."
+        },
+        {
+            "name": "EVT_ROUTESTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "status of route of which this job is part (user code)."
+        },
+        {
+            "name": "EVT_ROUTERSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "status of route of which this job is part (system code)."
+        },
+        {
+            "name": "EVT_ACD",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "bigint"
+            },
+            "description": "financial interface"
+        },
+        {
+            "name": "EVT_REJECTREASON",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 240
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 240
+            },
+            "description": "when requests are completed"
+        },
+        {
+            "name": "EVT_ENTEREDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "system user who entered job"
+        },
+        {
+            "name": "EVT_FAILURE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "component that failed"
+        },
+        {
+            "name": "EVT_DOWNTIMEHRS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "the number of hours obj was down"
+        },
+        {
+            "name": "EVT_SAFETY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Safety"
+        },
+        {
+            "name": "EVT_OBJCRITICALITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "Business Criticality"
+        },
+        {
+            "name": "EVT_MPPROJ",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "Scheduling Session"
+        },
+        {
+            "name": "EVT_TRANSORGID",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "bigint"
+            },
+            "description": "tracking transaction number of original transaction."
+        },
+        {
+            "name": "EVT_TRANSCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "tracking transaction code (user code, see entity tktp)."
+        },
+        {
+            "name": "EVT_TRANSGROUP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "int"
+            },
+            "description": "tracking transaction group sequence number."
+        },
+        {
+            "name": "EVT_CN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 24
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 24
+            },
+            "description": "change notice number."
+        },
+        {
+            "name": "EVT_REOPENED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "revision reopened."
+        },
+        {
+            "name": "EVT_PPOPK",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "int"
+            },
+            "description": "the link to the ppm objects table ( r5ppmobjects )."
+        },
+        {
+            "name": "EVT_PPMREV",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 4,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 4,
+                "scale": 0
+            },
+            "description": "revision number"
+        },
+        {
+            "name": "EVT_ROUTEREV",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 4,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 4,
+                "scale": 0
+            },
+            "description": "revision number."
+        },
+        {
+            "name": "EVT_ORG",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "event organization"
+        },
+        {
+            "name": "EVT_CLASS_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "classification code organization"
+        },
+        {
+            "name": "EVT_OBJECT_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "object organization"
+        },
+        {
+            "name": "EVT_LOCATION_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "location organization"
+        },
+        {
+            "name": "EVT_SCHEDGRP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Assigned By"
+        },
+        {
+            "name": "EVT_REQUESTSTART",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "requested start date"
+        },
+        {
+            "name": "EVT_SCHEDEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Sched. End Date"
+        },
+        {
+            "name": "EVT_REQUESTEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "requested end date"
+        },
+        {
+            "name": "EVT_MASTERCAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "checked to display job on master calendar"
+        },
+        {
+            "name": "EVT_STEP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 3,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 3,
+                "scale": 0
+            },
+            "description": "order of child job compared to other child jobs"
+        },
+        {
+            "name": "EVT_SEQ",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 3,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 3,
+                "scale": 0
+            },
+            "description": "sub-order of child job compared to other child jobs"
+        },
+        {
+            "name": "EVT_TRIGEVENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "triggering event code"
+        },
+        {
+            "name": "EVT_OLDRSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "r status to change from when triggering event closed (system)"
+        },
+        {
+            "name": "EVT_OLDSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "status to change from when triggering event closed"
+        },
+        {
+            "name": "EVT_NEWRSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "r status to change to when triggering event closed (system)"
+        },
+        {
+            "name": "EVT_NEWSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "status to change to when triggering event closed"
+        },
+        {
+            "name": "EVT_CONFLICT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "conflict flag as determined on master calendar"
+        },
+        {
+            "name": "EVT_CONFLICTRESOLVED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "resolved flag as determined on master calendar"
+        },
+        {
+            "name": "EVT_CONFLICTDESC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "description of conflict"
+        },
+        {
+            "name": "EVT_PACKAGE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 24
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 24
+            },
+            "description": "work package code associated to this job"
+        },
+        {
+            "name": "EVT_CODE_ALIAS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 45
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 45
+            },
+            "description": "event code alias"
+        },
+        {
+            "name": "EVT_CREATED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "creation date"
+        },
+        {
+            "name": "EVT_CREATEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "inserted by user"
+        },
+        {
+            "name": "EVT_UPDATED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "update date"
+        },
+        {
+            "name": "EVT_UPDATEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "updated by user"
+        },
+        {
+            "name": "EVT_CONTNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "contact name for the event"
+        },
+        {
+            "name": "EVT_CONTPHONE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "contact phone for the event"
+        },
+        {
+            "name": "EVT_CONTEMAIL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "contact email for the event"
+        },
+        {
+            "name": "EVT_CONTNOTES",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "contact notes for the event"
+        },
+        {
+            "name": "EVT_FOLLOWUP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "follow up flag"
+        },
+        {
+            "name": "EVT_UPDATECOUNT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 38,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 38,
+                "scale": 0
+            },
+            "description": "number of times this record has been updated"
+        },
+        {
+            "name": "EVT_SERVICEREQUEST",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The service request code related to the job."
+        },
+        {
+            "name": "EVT_PERSON",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "assigned to"
+        },
+        {
+            "name": "EVT_PRINT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Whether a job should be printed"
+        },
+        {
+            "name": "EVT_BILLABLE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Whether the Work Order is to be billed back to the customer or not"
+        },
+        {
+            "name": "EVT_PERIODUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "PPM period UOM"
+        },
+        {
+            "name": "EVT_METERDUE2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Second meter due"
+        },
+        {
+            "name": "EVT_METUOM2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Second meter UOM"
+        },
+        {
+            "name": "EVT_ROUTEPARENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The job number of the route parent."
+        },
+        {
+            "name": "EVT_SYSLEVEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "system level code"
+        },
+        {
+            "name": "EVT_SOURCECODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 45
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 45
+            },
+            "description": "source code"
+        },
+        {
+            "name": "EVT_SOURCESYSTEM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 45
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 45
+            },
+            "description": "source system"
+        },
+        {
+            "name": "EVT_INTERFACE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "interface timestamp"
+        },
+        {
+            "name": "EVT_LASTCAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The date the equipment of the work order was last calibrated."
+        },
+        {
+            "name": "EVT_SOPEFFECTIVE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The date from which the calibration Standard Operating Procedure was effective"
+        },
+        {
+            "name": "EVT_CALSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 2
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 2
+            },
+            "description": "The calibration status. P for Pass, F for Fail, PF for Pass, fail exists, PR for Pass, recal exists or I for"
+        },
+        {
+            "name": "EVT_INCREMENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "he increment"
+        },
+        {
+            "name": "EVT_PRECISION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 2,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 2,
+                "scale": 0
+            },
+            "description": "The precision"
+        },
+        {
+            "name": "EVT_PIDNO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "P&ID No./Tag ID"
+        },
+        {
+            "name": "EVT_PIDDRAWING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "P&ID Drawing"
+        },
+        {
+            "name": "EVT_SERVICEPERC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The service percentage."
+        },
+        {
+            "name": "EVT_SOP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The Standard Operating Procedure used while calibrating"
+        },
+        {
+            "name": "EVT_SRQCALLNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Caller name"
+        },
+        {
+            "name": "EVT_SRQCUSTOMER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Customer code"
+        },
+        {
+            "name": "EVT_SRQLEVEL1",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "level1 code"
+        },
+        {
+            "name": "EVT_FIRSTBILL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The first bill on which this event appeared."
+        },
+        {
+            "name": "EVT_JECATEGORY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 25
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 25
+            },
+            "description": "Column for GL JE Category"
+        },
+        {
+            "name": "EVT_JESOURCE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 25
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 25
+            },
+            "description": "Column for GL JE Source"
+        },
+        {
+            "name": "EVT_GLTRANSFERFLAG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Column for GL Transfer flag"
+        },
+        {
+            "name": "EVT_GLTRANSFER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Column for Date of GL Transfer"
+        },
+        {
+            "name": "EVT_MULTIEQUIP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Multiple Equipment"
+        },
+        {
+            "name": "EVT_AGREEMENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The customer contract of the work order"
+        },
+        {
+            "name": "EVT_SIGPB",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "The user who last performed the calibration"
+        },
+        {
+            "name": "EVT_SIGRB",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "The user who last reviewed the calibration"
+        },
+        {
+            "name": "EVT_LASTTIMEPB",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The last time the calibration was performed"
+        },
+        {
+            "name": "EVT_LASTTIMERB",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The last time the calibration was reviewed"
+        },
+        {
+            "name": "EVT_COMPLETED_TRUNC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Day part of evt_completed field, in SQL server only"
+        },
+        {
+            "name": "EVT_PERFORMEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "Performed By"
+        },
+        {
+            "name": "EVT_REVIEWEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "Reviewed By"
+        },
+        {
+            "name": "EVT_METERINTERVAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Meter Interval"
+        },
+        {
+            "name": "EVT_METERINTERVAL2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Meter Interval 2"
+        },
+        {
+            "name": "EVT_WORKADDRESS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 256
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 256
+            },
+            "description": "Work Address"
+        },
+        {
+            "name": "EVT_PFPROMISEDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Permanent Promise Date"
+        },
+        {
+            "name": "EVT_TFPROMISEDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Temporary Fix Date Promised"
+        },
+        {
+            "name": "EVT_TFDATECOMPLETED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Temporary Fix Date Completed"
+        },
+        {
+            "name": "EVT_EQUIPMENTUSABILITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Equipment Usability"
+        },
+        {
+            "name": "EVT_EQUIPMENTUSABILITY_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Equipment Usability Organization"
+        },
+        {
+            "name": "EVT_PROVIDER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Provider"
+        },
+        {
+            "name": "EVT_PROVIDER_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Provider Organization"
+        },
+        {
+            "name": "EVT_SERVICEPROBLEM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Service Problem Code"
+        },
+        {
+            "name": "EVT_SERVICEPROBLEM_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Service Problem Code Organization"
+        },
+        {
+            "name": "EVT_SERVICECATEGORY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Service Category"
+        },
+        {
+            "name": "EVT_SERVICECATEGORY_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Service Category Organization"
+        },
+        {
+            "name": "EVT_UDFCHAR01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Equipment State Needed",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR03",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "External System Reference Number",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR04",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR05",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR06",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "External System Reference",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR07",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Scheduling Week",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR08",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Pick Ticket Status",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR09",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Reason For Miss",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR10",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Is External System Reference Approved?",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR11",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "No Action Taken Reason",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR12",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "PM Extension Justification Reason",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR13",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Planning Status",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR14",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Impact",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR15",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Calibration Status",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR16",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Work Request Tracker",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR17",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Additional Contact Person 1",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR18",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Additional Contact Person 2",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR19",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Additional Contact Person 3",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR20",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR21",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR22",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Updates Needed (Case)",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR23",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR24",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR25",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR26",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR27",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR28",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR29",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR30",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Completed By",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFNUM01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFNUM02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Months (PM Justification)",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFNUM03",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "# of PM Justification Requests",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFNUM04",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFNUM05",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFDATE01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFDATE02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFDATE03",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Extension Date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFDATE04",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFDATE05",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFCHKBOX01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "GxP",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_UDFCHKBOX02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_UDFCHKBOX03",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Has Scheduling Comments",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_UDFCHKBOX04",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Direct Impact",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_UDFCHKBOX05",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "PM Updates Needed",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_FROMPOINT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The position of From point based on the equipment starting point"
+        },
+        {
+            "name": "EVT_FROMREFDESC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Reference description for From Point"
+        },
+        {
+            "name": "EVT_FROMGEOREF",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1000
+            },
+            "description": "The detailed geographical description of From Point"
+        },
+        {
+            "name": "EVT_TOPOINT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The position of To point based on the equipment starting point"
+        },
+        {
+            "name": "EVT_TOREFDESC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Reference description for To Point"
+        },
+        {
+            "name": "EVT_TOGEOREF",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1000
+            },
+            "description": "The detailed geographical description of To Point"
+        },
+        {
+            "name": "EVT_PERFORMONWEEK",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "week of the month on which to perform PM"
+        },
+        {
+            "name": "EVT_PERFORMONDAY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 1,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 1,
+                "scale": 0
+            },
+            "description": "day of the week on which to perform PM"
+        },
+        {
+            "name": "EVT_ALERT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Alert code"
+        },
+        {
+            "name": "EVT_PRODUCTIONREQUEST",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Production Request Code"
+        },
+        {
+            "name": "EVT_PRODUCTIONREQUESTREV",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 4,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 4,
+                "scale": 0
+            },
+            "description": "Production Request Revision"
+        },
+        {
+            "name": "EVT_PRODUCTIONREQUEST_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Production Request Organization Code"
+        },
+        {
+            "name": "EVT_PRODORDER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Production Order Code"
+        },
+        {
+            "name": "EVT_PRODPRIORITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 256
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 256
+            },
+            "description": "Production Priority"
+        },
+        {
+            "name": "EVT_ACCOUNTINGENTITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 22
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 22
+            },
+            "description": "Accounting Entity"
+        },
+        {
+            "name": "EVT_PRODUCTIONSTART",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Production Start Date"
+        },
+        {
+            "name": "EVT_PRODUCTIONEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Production End Date"
+        },
+        {
+            "name": "EVT_LASTSTATUSUPDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "timestamp of last status change"
+        },
+        {
+            "name": "EVT_MP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The maintenance pattern of the WO"
+        },
+        {
+            "name": "EVT_MP_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The maintenance pattern organization of the WO"
+        },
+        {
+            "name": "EVT_MP_REV",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 4,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 4,
+                "scale": 0
+            },
+            "description": "The maintenance pattern revision of the WO"
+        },
+        {
+            "name": "EVT_MP_SEQ",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "The maintenance pattern sequence of the WO"
+        },
+        {
+            "name": "EVT_METERDUEDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The predicted date the meter due value will be reached"
+        },
+        {
+            "name": "EVT_METERDUEDATE2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The predicted date the second meter due value will be reached"
+        },
+        {
+            "name": "EVT_CAMPAIGN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Campaign Header Code"
+        },
+        {
+            "name": "EVT_CAMPAIGN_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Campaign Organization"
+        },
+        {
+            "name": "EVT_CAMPAIGN_LINE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "Campaign Line"
+        },
+        {
+            "name": "EVT_CAMPAIGN_SURVEY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Survey Code"
+        },
+        {
+            "name": "EVT_MPPROJTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_PSQPK",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 38,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 38,
+                "scale": 0
+            },
+            "description": "Primary Key Code in r5patternsequences"
+        },
+        {
+            "name": "EVT_OKWINENDVAL2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_NEARWINBEGVAL2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_GENWINBEGVAL2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_OUTPUTCALCTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_CEILPERMIT",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_LIFESAFETY",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_INFECTCONTROL",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_PCRA",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_PFI",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_BURNPERMIT",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_PATIENTSAFETY",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_RECALLNOTICE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_SMDA",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_VISITORINJURY",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_STAFFINJURY",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_SECURITYINCIDENT",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_PROPERTYDAMAGE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_HAZMATINCIDENT",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_FIREINCIDENT",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_MEDICEQUIPINCIDENT",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_UTILITYINCIDENT",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_INVOICE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Invoice"
+        },
+        {
+            "name": "EVT_INVOICE_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Invoice Organization"
+        },
+        {
+            "name": "EVT_INVOICE_REVISION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_INVOICELINE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "The invoice line of the customer invoice detail record"
+        },
+        {
+            "name": "EVT_PHONE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_EMAIL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_LOCKOUT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_PERSONALPROTECTIVEEQUIP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_CONFINEDSPACE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_STATEMENTOFCOND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_BUILDMAINTPROGRAM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_HIPAACONFIDENTIALITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_FACILITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_FACILITY_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_ADDITIONALINFO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4000
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "EVT_SAFETYREVIEWED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Date of safety reviewed signature."
+        },
+        {
+            "name": "EVT_SAFETYREVIEWEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "User of safety reviewed signature."
+        },
+        {
+            "name": "EVT_SAFETYREVIEWEDNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Name of the user of safety reviewed signature."
+        },
+        {
+            "name": "EVT_SAFETYREVIEWEDTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Type of safety reviewed signature."
+        },
+        {
+            "name": "EVT_PERMITREVIEWED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Date of permit reviewed signature."
+        },
+        {
+            "name": "EVT_PERMITREVIEWEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "User of permit reviewed signature."
+        },
+        {
+            "name": "EVT_PERMITREVIEWEDNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Name of the user of permit reviewed signature."
+        },
+        {
+            "name": "EVT_PERMITREVIEWEDTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Type of permit reviewed signature."
+        },
+        {
+            "name": "EVT_ORIGWO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "In case of a permit to work renewal, the original work order."
+        },
+        {
+            "name": "EVT_ORIGACT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "In case of a permit to work renewal, the original activity."
+        },
+        {
+            "name": "EVT_MINOR",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Flag to indicate whether the workorder is a minor work order."
+        },
+        {
+            "name": "EVT_INSPECTIONDIRECTION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The inspection direction of the work order"
+        },
+        {
+            "name": "EVT_FLOW",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The flow of the work order"
+        },
+        {
+            "name": "EVT_CALCULATEDPRIORITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The calculated priority of the work order"
+        },
+        {
+            "name": "EVT_PRESERVECALCPRIORITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Flag to indicate whether the calculated priority of the work order should be preserved"
+        },
+        {
+            "name": "EVT_GUESTPROFILEID",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 30,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 30,
+                "scale": 0
+            },
+            "description": "The guest profile ID of the work order."
+        },
+        {
+            "name": "EVT_MANAGERPROFILEID",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "The manager profile ID of the work order."
+        },
+        {
+            "name": "EVT_GUESTSALUTATION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The guest salutation of the work order."
+        },
+        {
+            "name": "EVT_GUESTFIRSTNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 100
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 100
+            },
+            "description": "The guest first name of the work order."
+        },
+        {
+            "name": "EVT_GUESTLASTNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 100
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 100
+            },
+            "description": "The guest last name of the work order."
+        },
+        {
+            "name": "EVT_GUESTMIDDLENAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "The uest middle name of the work order."
+        },
+        {
+            "name": "EVT_GUESTEMAIL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "The guest email address of the work order."
+        },
+        {
+            "name": "EVT_GUESTPHONENUMBER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "The guest phone number of the work order."
+        },
+        {
+            "name": "EVT_VIPSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The VIP status of the work order."
+        },
+        {
+            "name": "EVT_RESERVATIONNUM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "The reservation number of the work order."
+        },
+        {
+            "name": "EVT_SCHEDULEDSTARTTIME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 5,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 5,
+                "scale": 0
+            },
+            "description": "The scheduled start time of the work order."
+        },
+        {
+            "name": "EVT_SCHEDULEDENDTIME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 5,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 5,
+                "scale": 0
+            },
+            "description": "The scheduled end time of the work order."
+        },
+        {
+            "name": "EVT_SUPPLIER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The supplier of the work order."
+        },
+        {
+            "name": "EVT_SUPPLIER_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The organization of the supplier of the work order."
+        },
+        {
+            "name": "EVT_CASEMANAGEMENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Case"
+        },
+        {
+            "name": "EVT_CASEMANAGEMENTTASK",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The case managemant task of the work order."
+        },
+        {
+            "name": "EVT_ORIGCASEMANAGEMENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The originating case management record."
+        },
+        {
+            "name": "EVT_DUPCASEMANAGEMENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The duplicate case management of the work order."
+        },
+        {
+            "name": "EVT_CONTACTRECORD",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The call center of the work order."
+        },
+        {
+            "name": "EVT_CONTACTRECORD_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The organization of the call center of the work order."
+        },
+        {
+            "name": "EVT_WORKSPACE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The workspace of the work order."
+        },
+        {
+            "name": "EVT_LATITUDE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 6
+            },
+            "description": "The latitude of the work order."
+        },
+        {
+            "name": "EVT_LONGITUDE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "The longitude of the work order."
+        },
+        {
+            "name": "EVT_FROM_REFERENCE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 38,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 38,
+                "scale": 0
+            },
+            "description": "The reference of the from point."
+        },
+        {
+            "name": "EVT_FROM_OFFSET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The offset relative to the from point."
+        },
+        {
+            "name": "EVT_FROM_OFFSET_PERCENTAGE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 5,
+                "scale": 2
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 5,
+                "scale": 2
+            },
+            "description": "The percentage of the offset relative to the from point."
+        },
+        {
+            "name": "EVT_FROM_OFFSET_DIRECTION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The direction of the offset relative to the from point."
+        },
+        {
+            "name": "EVT_FROM_XCOORDINATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The X coordinate of the from point."
+        },
+        {
+            "name": "EVT_FROM_YCOORDINATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The Y coordinate of the from point."
+        },
+        {
+            "name": "EVT_FROM_LATITUDE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The latitude of the from point."
+        },
+        {
+            "name": "EVT_FROM_LONGITUDE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The longitude of the from point"
+        },
+        {
+            "name": "EVT_FROM_RELATIONSHIP_TYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The relationship type of the from point."
+        },
+        {
+            "name": "EVT_FROM_HORIZONTAL_OFFSET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The horizontal offset relative to the from point."
+        },
+        {
+            "name": "EVT_FROM_HORIZONTAL_OFFSETUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "The unit of measure of the horizontal offset relative to the from point."
+        },
+        {
+            "name": "EVT_FROM_HORIZONTAL_OFFSETTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The type of horizontal offset relative to the from point."
+        },
+        {
+            "name": "EVT_FROM_VERTICAL_OFFSET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The vertical offset relative to the from point."
+        },
+        {
+            "name": "EVT_FROM_VERTICAL_OFFSETUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "The unit of measure of the vertical offset relative to the from point."
+        },
+        {
+            "name": "EVT_FROM_VERTICAL_OFFSETTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The type of vertical offset relative to the from point."
+        },
+        {
+            "name": "EVT_TO_REFERENCE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 38,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 38,
+                "scale": 0
+            },
+            "description": "The reference of the to point."
+        },
+        {
+            "name": "EVT_TO_OFFSET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The offset relative to the to point."
+        },
+        {
+            "name": "EVT_TO_OFFSET_DIRECTION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The direction of the offset relative to the to point."
+        },
+        {
+            "name": "EVT_TO_OFFSET_PERCENTAGE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 5,
+                "scale": 2
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 5,
+                "scale": 2
+            },
+            "description": "The percentage of the offset relative to the to point."
+        },
+        {
+            "name": "EVT_TO_XCOORDINATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The X coordinate of the to point."
+        },
+        {
+            "name": "EVT_TO_YCOORDINATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The Y coordinate of the to point."
+        },
+        {
+            "name": "EVT_TO_LATITUDE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The latitude of the to point."
+        },
+        {
+            "name": "EVT_TO_LONGITUDE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The longitude of the to point"
+        },
+        {
+            "name": "EVT_TO_RELATIONSHIP_TYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The relationship type of the to point."
+        },
+        {
+            "name": "EVT_TO_HORIZONTAL_OFFSET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The horizontal offset relative to the to point."
+        },
+        {
+            "name": "EVT_TO_HORIZONTAL_OFFSETUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "The unit of measure of the horizontal offset relative to the to point."
+        },
+        {
+            "name": "EVT_TO_HORIZONTAL_OFFSETTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The type of horizontal offset relative to the to point."
+        },
+        {
+            "name": "EVT_TO_VERTICAL_OFFSET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The vertical offset relative to the to point."
+        },
+        {
+            "name": "EVT_TO_VERTICAL_OFFSETUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "The unit of measure of the vertical offset relative to the to point."
+        },
+        {
+            "name": "EVT_TO_VERTICAL_OFFSETTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The type of vertical offset relative to the to point."
+        },
+        {
+            "name": "EVT_RELATIONSHIP_TYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The relationship type of the work order."
+        },
+        {
+            "name": "EVT_TYPECATEGORY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The type category of the work order."
+        },
+        {
+            "name": "EVT_UDFNOTE01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 2000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 2000
+            },
+            "description": "Describe the Event. If specific equipment doesn't exist, add item description and location",
+            "category": "UDF_NOTE"
+        },
+        {
+            "name": "EVT_UDFNOTE02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 2000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 2000
+            },
+            "description": "Impact/Actions Taken: Examples: Batch Lost, Production Stopped, Quarantined Area",
+            "category": "UDF_NOTE"
+        },
+        {
+            "name": "EVT_LASTSAVED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime2"
+            },
+            "description": "Timestamp of last update"
+        },
+        {
+            "name": "EVT_UDFCHAR31",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR32",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR33",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR34",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR35",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR36",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR37",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR38",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR39",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR40",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR41",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR42",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR43",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR44",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR45",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFNUM06",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFNUM07",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFNUM08",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFNUM09",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFNUM10",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "EVT_UDFDATE06",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFDATE07",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFDATE08",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFDATE09",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFDATE10",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "EVT_UDFCHKBOX06",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_UDFCHKBOX07",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_UDFCHKBOX08",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Environmental",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_UDFCHKBOX09",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_UDFCHKBOX10",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "EVT_FAILUREMODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The failure mode of the work order"
+        },
+        {
+            "name": "EVT_SYMPTOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The symptom of the work order"
+        },
+        {
+            "name": "EVT_TACTICALCAUSE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The tactical cause of the work order"
+        },
+        {
+            "name": "EVT_HUMANFACTOR",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The human factor of the work order"
+        },
+        {
+            "name": "EVT_WORKMANSHIP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The workmanship of the work order"
+        },
+        {
+            "name": "EVT_HUMANOVERSIGHT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The human oversight of the work order"
+        },
+        {
+            "name": "EVT_METHODOFDETECTION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The method of detection of the work order"
+        },
+        {
+            "name": "EVT_CLOSINGLATITUDE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 6
+            },
+            "description": "The closing latitude of the work order"
+        },
+        {
+            "name": "EVT_CLOSINGLONGITUDE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "The closing longitude of the work order"
+        },
+        {
+            "name": "EVT_UDFCHAR46",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR47",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR48",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR49",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR50",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR51",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR52",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR53",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR54",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_UDFCHAR55",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "EVT_FOLLOWUPGROUP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The follow-up group of the work order"
+        },
+        {
+            "name": "EVT_SQLIDENTITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "int"
+            },
+            "sqlserver": {
+                "datatype": "int",
+                "identity": true
+            },
+            "description": "Identity column for SQL Server",
+            "is_identity": true
+        }
+    ]
+}

@@ -1,0 +1,6076 @@
+{
+    "table_name": "R5OBJECTS",
+    "module": "EQUIPMENT",
+    "columns": [
+        {
+            "name": "OBJ_OBTYPE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "object type (user code, see entity obtp)."
+        },
+        {
+            "name": "OBJ_OBRTYPE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "object type (system code, see entity obtp)."
+        },
+        {
+            "name": "OBJ_CODE",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "object code."
+        },
+        {
+            "name": "OBJ_DESC",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "object description."
+        },
+        {
+            "name": "OBJ_CLASS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "classification code."
+        },
+        {
+            "name": "OBJ_CATEGORY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "category code."
+        },
+        {
+            "name": "OBJ_COSTCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "cost code."
+        },
+        {
+            "name": "OBJ_LTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "object type of location code (always l)."
+        },
+        {
+            "name": "OBJ_LOCATION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "location code."
+        },
+        {
+            "name": "OBJ_TAG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 24
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 24
+            },
+            "description": "object tag number."
+        },
+        {
+            "name": "OBJ_PTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "object type of position object (always p)."
+        },
+        {
+            "name": "OBJ_POSITION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "object code of position object at which object is located."
+        },
+        {
+            "name": "OBJ_PARENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "object code of parent object (of same object type)."
+        },
+        {
+            "name": "OBJ_DEPEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "value is + if object is dependent on parent object."
+        },
+        {
+            "name": "OBJ_MANUFACT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 45
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 45
+            },
+            "description": "manufacturer code."
+        },
+        {
+            "name": "OBJ_MRC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "maintenance responsibility centre code."
+        },
+        {
+            "name": "OBJ_PART",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "part code."
+        },
+        {
+            "name": "OBJ_SERIALNO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Serial Number"
+        },
+        {
+            "name": "OBJ_STORE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "store code."
+        },
+        {
+            "name": "OBJ_STATUS",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "object status (user code, see entity obst)."
+        },
+        {
+            "name": "OBJ_RSTATUS",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "object status (system code, see entity obst)."
+        },
+        {
+            "name": "OBJ_COMMISS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "date object commissioned into service."
+        },
+        {
+            "name": "OBJ_WITHDRAW",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "date object was last withdrawn from service."
+        },
+        {
+            "name": "OBJ_RECORD",
+            "nullable": false,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The date on which the record is inserted or updated."
+        },
+        {
+            "name": "OBJ_GROUP",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 12
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 12
+            },
+            "description": "user group code of user who created object record."
+        },
+        {
+            "name": "OBJ_USER",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "username of person who created object record."
+        },
+        {
+            "name": "OBJ_ORDER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "purchase order number."
+        },
+        {
+            "name": "OBJ_ORDERLINE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 8,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 8,
+                "scale": 0
+            },
+            "description": "purchase order line number."
+        },
+        {
+            "name": "OBJ_PRODUCTION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "value is + if object is part of production process."
+        },
+        {
+            "name": "OBJ_PRIMARYUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "code of primary unit of measure."
+        },
+        {
+            "name": "OBJ_ACD",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "bigint"
+            },
+            "description": "account details code."
+        },
+        {
+            "name": "OBJ_NOTUSED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "value is + if object is no longer used."
+        },
+        {
+            "name": "OBJ_SAFETY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "value is + if object is safety related."
+        },
+        {
+            "name": "OBJ_CRITICALITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "criticality code of object (user code, see entity obcr)."
+        },
+        {
+            "name": "OBJ_PROFILE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "object profile code."
+        },
+        {
+            "name": "OBJ_MANUFACTMODEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Model"
+        },
+        {
+            "name": "OBJ_MANUFACTREVNUM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "manufacturer revision number."
+        },
+        {
+            "name": "OBJ_VALUE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER"
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "purchase cost of object."
+        },
+        {
+            "name": "OBJ_SOURCESYSTEM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 45
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 45
+            },
+            "description": "identification of source system of details."
+        },
+        {
+            "name": "OBJ_SOURCECODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 45
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 45
+            },
+            "description": "unique identification of details in source system."
+        },
+        {
+            "name": "OBJ_VARIABLE1",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "user defined variable (1)"
+        },
+        {
+            "name": "OBJ_VARIABLE2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "user defined variable (2)."
+        },
+        {
+            "name": "OBJ_VARIABLE3",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "user defined variable (3)"
+        },
+        {
+            "name": "OBJ_VARIABLE4",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "user defined variable (4)"
+        },
+        {
+            "name": "OBJ_VARIABLE5",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "user defined variable (5)"
+        },
+        {
+            "name": "OBJ_VARIABLE6",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "user defined variable (6)"
+        },
+        {
+            "name": "OBJ_STATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "object state (user code, entity obsa)."
+        },
+        {
+            "name": "OBJ_RSTATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "object state (system code, entity obsa)."
+        },
+        {
+            "name": "OBJ_CN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 24
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 24
+            },
+            "description": "change notice code."
+        },
+        {
+            "name": "OBJ_ORG",
+            "nullable": false,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "object organization"
+        },
+        {
+            "name": "OBJ_CLASS_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "classification code organization"
+        },
+        {
+            "name": "OBJ_LOCATION_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "location organization"
+        },
+        {
+            "name": "OBJ_POSITION_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "position organization"
+        },
+        {
+            "name": "OBJ_PARENT_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "parent organization"
+        },
+        {
+            "name": "OBJ_ORDER_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "purchase order organization"
+        },
+        {
+            "name": "OBJ_PART_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "part organization"
+        },
+        {
+            "name": "OBJ_BIN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "bin"
+        },
+        {
+            "name": "OBJ_LOT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 12
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 12
+            },
+            "description": "lot"
+        },
+        {
+            "name": "OBJ_SYSLEVEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "system level code"
+        },
+        {
+            "name": "OBJ_ASMLEVEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "assembly level code"
+        },
+        {
+            "name": "OBJ_COMPLEVEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "component level code"
+        },
+        {
+            "name": "OBJ_UPDATED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "update date"
+        },
+        {
+            "name": "OBJ_UPDATEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "updated by user"
+        },
+        {
+            "name": "OBJ_PREVENTEVTCOMP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "flag to indicate whether jobs on the object can be completed."
+        },
+        {
+            "name": "OBJ_PERSON",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "person assigned to the object"
+        },
+        {
+            "name": "OBJ_ESIGNATURE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 100
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 100
+            },
+            "description": "Holds the user and electronic signature type of the original, as well as the new asset, during transfer."
+        },
+        {
+            "name": "OBJ_UPDATECOUNT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 38,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 38,
+                "scale": 0
+            },
+            "description": "number of times this record has been updated"
+        },
+        {
+            "name": "OBJ_DORMSTART",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The dormant period start date"
+        },
+        {
+            "name": "OBJ_DORMEND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The dormant period end date"
+        },
+        {
+            "name": "OBJ_DORMREUSE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Flag indicating whether the dormant period is also valid for next year. Default will be -."
+        },
+        {
+            "name": "OBJ_GISOBJID",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 38,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 38,
+                "scale": 0
+            },
+            "description": "GIS Object ID"
+        },
+        {
+            "name": "OBJ_GISPROFILE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Affirms a profile as a GIS profile"
+        },
+        {
+            "name": "OBJ_PROFILE_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "profile organization"
+        },
+        {
+            "name": "OBJ_SOLDDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The date until which the equipment should be depreciated. Also referred to as date sold/scrapped."
+        },
+        {
+            "name": "OBJ_TRANSFERDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Date equipment was transferred."
+        },
+        {
+            "name": "OBJ_CGMP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Checkbox to designate a equipment as being Cgmp"
+        },
+        {
+            "name": "OBJ_TESTPOINTUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The input unit of measure."
+        },
+        {
+            "name": "OBJ_OUTPUTUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The output unit of measure."
+        },
+        {
+            "name": "OBJ_INCREMENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The increment"
+        },
+        {
+            "name": "OBJ_PRECISION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 2,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 2,
+                "scale": 0
+            },
+            "description": "The precision"
+        },
+        {
+            "name": "OBJ_PIDNO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "The P.ID number."
+        },
+        {
+            "name": "OBJ_PIDDRAWING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "The P.ID drawing"
+        },
+        {
+            "name": "OBJ_SERVICEPERC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The service percentage."
+        },
+        {
+            "name": "OBJ_DEVICETOLFROM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The from device tolerance."
+        },
+        {
+            "name": "OBJ_DEVICETOLTO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The to device tolerance."
+        },
+        {
+            "name": "OBJ_DEVICETOLTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "The type of device tolerance, absolute or percentage. Defaults to P."
+        },
+        {
+            "name": "OBJ_DEVICERANGEFROM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The from test point range."
+        },
+        {
+            "name": "OBJ_DEVICERANGETO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The to test point range."
+        },
+        {
+            "name": "OBJ_OUTPUTRANGEFROM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The from output range."
+        },
+        {
+            "name": "OBJ_OUTPUTRANGETO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The to output range."
+        },
+        {
+            "name": "OBJ_PROCESSTOLFROM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The from process tolerance."
+        },
+        {
+            "name": "OBJ_PROCESSTOLTO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The to process tolerance."
+        },
+        {
+            "name": "OBJ_PROCESSRANGEFROM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The from process range."
+        },
+        {
+            "name": "OBJ_PROCESSRANGETO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The to process range."
+        },
+        {
+            "name": "OBJ_SET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The set the test point belongs to. Defaults to *."
+        },
+        {
+            "name": "OBJ_SOP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The S.O.P. to be used when calibrating."
+        },
+        {
+            "name": "OBJ_LOOP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Whether the equipment is a loop. Defaults to -."
+        },
+        {
+            "name": "OBJ_INSTRUMENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Whether the equipment is an instrument. Defaults to -."
+        },
+        {
+            "name": "OBJ_INSTRUMENTTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Type of instrument."
+        },
+        {
+            "name": "OBJ_INTERFACE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "financial interface"
+        },
+        {
+            "name": "OBJ_LINKGISWO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Indicates that the system will attach the GIS map as a linked document when work orders are released for"
+        },
+        {
+            "name": "OBJ_GISLAYER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 60
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 60
+            },
+            "description": "GIS Layer"
+        },
+        {
+            "name": "OBJ_XLOCATION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "x-coordinate of a GIS-integrated equipment"
+        },
+        {
+            "name": "OBJ_YLOCATION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "y-coordinate of a GIS-integrated equipment"
+        },
+        {
+            "name": "OBJ_LENGTH",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "length of a linear equipment"
+        },
+        {
+            "name": "OBJ_LENGTHUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "unit of measure for the equipment length"
+        },
+        {
+            "name": "OBJ_LINEARREFUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "unit of measure for linear references"
+        },
+        {
+            "name": "OBJ_LINEARREFPRECISION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 2,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 2,
+                "scale": 0
+            },
+            "description": "number of decimal places to include when converting to linear reference uom"
+        },
+        {
+            "name": "OBJ_GEOREF",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1000
+            },
+            "description": "The detailed geographical description of From Point"
+        },
+        {
+            "name": "OBJ_VEHICLE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Whether the equipment is a vehicle."
+        },
+        {
+            "name": "OBJ_FLEETCUSTOMER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The fleet customer."
+        },
+        {
+            "name": "OBJ_FLEETCUSTOMER_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The organization of the fleet customer."
+        },
+        {
+            "name": "OBJ_BILLINGCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The billing code."
+        },
+        {
+            "name": "OBJ_BILLINGCODE_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The organization of the billing code."
+        },
+        {
+            "name": "OBJ_MARKUPCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The markup code."
+        },
+        {
+            "name": "OBJ_MARKUPCODE_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The organization of the markup code."
+        },
+        {
+            "name": "OBJ_VEHICLERSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The system status of the vehicle."
+        },
+        {
+            "name": "OBJ_VEHICLESTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The user status of the vehicle."
+        },
+        {
+            "name": "OBJ_ISSUEDTO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The person to whom the vehicle has been issued."
+        },
+        {
+            "name": "OBJ_JECATEGORY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 25
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 25
+            },
+            "description": "Column for GL JE Category"
+        },
+        {
+            "name": "OBJ_JESOURCE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 25
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 25
+            },
+            "description": "Column for GL JE Source"
+        },
+        {
+            "name": "OBJ_GLTRANSFERFLAG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Column for GL Transfer flag"
+        },
+        {
+            "name": "OBJ_GLTRANSFER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Column for Date of GL Transfer"
+        },
+        {
+            "name": "OBJ_MINPENALTY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Minimum Penalty field"
+        },
+        {
+            "name": "OBJ_PENALTYFACTOR",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 10,
+                "scale": 4
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 10,
+                "scale": 4
+            },
+            "description": "Penalty Factor"
+        },
+        {
+            "name": "OBJ_CALGROUP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Calendar Group"
+        },
+        {
+            "name": "OBJ_CALGROUPORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Calender Group Organization"
+        },
+        {
+            "name": "OBJ_UDFCHAR01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR03",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR04",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR05",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR06",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR07",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR08",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR09",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR10",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR11",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR12",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR13",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR14",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR15",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR16",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR17",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR18",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR19",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR20",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR21",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR22",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR23",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR24",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR25",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR26",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR27",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR28",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR29",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR30",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFNUM01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFNUM02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFNUM03",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFNUM04",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFNUM05",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFDATE01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFDATE02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFDATE03",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFDATE04",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFDATE05",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type date",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX03",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX04",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX05",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_SDMPRESENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Indicates if the equipment has its own set of SDM entries."
+        },
+        {
+            "name": "OBJ_SDMPATH",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Indicates whether SDM is checked for this equipment or not"
+        },
+        {
+            "name": "OBJ_COSTOFNEEDEDREPAIRS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Cost of Needed repairs"
+        },
+        {
+            "name": "OBJ_REPLACEMENTVALUE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Replacement value"
+        },
+        {
+            "name": "OBJ_FACILITYCONDITIONINDEX",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Index of facility conditions"
+        },
+        {
+            "name": "OBJ_BILLABLE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Billing Flag"
+        },
+        {
+            "name": "OBJ_GASINDEX",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Tracking Gas Index Flag"
+        },
+        {
+            "name": "OBJ_FLOORAREA",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Floor Area"
+        },
+        {
+            "name": "OBJ_FLOORAREAUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Floor Area UOM"
+        },
+        {
+            "name": "OBJ_ESTREVENUE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Estimated Revenue"
+        },
+        {
+            "name": "OBJ_REGION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Region"
+        },
+        {
+            "name": "OBJ_PRIMARYUSE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "Primary Use"
+        },
+        {
+            "name": "OBJ_YEARBUILT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 4,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 4,
+                "scale": 0
+            },
+            "description": "Year Built"
+        },
+        {
+            "name": "OBJ_SERVICELIFE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 3,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 3,
+                "scale": 0
+            },
+            "description": "Service Life in years"
+        },
+        {
+            "name": "OBJ_RESOURCE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Track Resources (+ for yes, - for No)"
+        },
+        {
+            "name": "OBJ_RESOURCEPRESENT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Is Resources Available(+ for yes, - for No)"
+        },
+        {
+            "name": "OBJ_LASTSTATUSUPDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "timestamp of last status change"
+        },
+        {
+            "name": "OBJ_REGION_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Region Organization"
+        },
+        {
+            "name": "OBJ_GISMAP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_GISMAP_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_ENERGYSTARELIGIBLE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_RELIABILITYRANKING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The reliability ranking code"
+        },
+        {
+            "name": "OBJ_RELIABILITYRANKING_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The reliability ranking organization"
+        },
+        {
+            "name": "OBJ_RELIABILITYRANKINGREV",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 4,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 4,
+                "scale": 0
+            },
+            "description": "The reliability ranking revision"
+        },
+        {
+            "name": "OBJ_RELIABILITYRANKINGINDEX",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The reliability ranking index"
+        },
+        {
+            "name": "OBJ_RELIABILITYRANKINGSCORE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The reliability ranking score"
+        },
+        {
+            "name": "OBJ_RELIABILITYRANKINGLOCKED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Is the reliability ranking data locked"
+        },
+        {
+            "name": "OBJ_RRVALUESLASTCALCULATED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Reliability ranking data last calculated"
+        },
+        {
+            "name": "OBJ_RRSURVEYLASTUPDATED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Reliability ranking survey last updated"
+        },
+        {
+            "name": "OBJ_OUTPUTCALCTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_GIS_UPDATECOUNT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 38,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 38,
+                "scale": 0
+            },
+            "description": "number of times this record has been updated"
+        },
+        {
+            "name": "OBJ_GIS_SYNCCOUNT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 38,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 38,
+                "scale": 0
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_ALIAS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Equipment Alias"
+        },
+        {
+            "name": "OBJ_RENTAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_RENTALTEMPLATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_RENTALTEMPLATE_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_CONTRACT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Contract Equipment"
+        },
+        {
+            "name": "OBJ_CONTRACTTEMPLATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Contract Template"
+        },
+        {
+            "name": "OBJ_CONTRACTTEMPLATE_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Contract Template Organization"
+        },
+        {
+            "name": "OBJ_CUSTOMER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "Customer"
+        },
+        {
+            "name": "OBJ_CUSTOMER_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "Customer Organization"
+        },
+        {
+            "name": "OBJ_AVAILABILITYSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Availability Status"
+        },
+        {
+            "name": "OBJ_AVAILABILITYRSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Availability System Status"
+        },
+        {
+            "name": "OBJ_TEMPMONITORED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_HARDWAREVER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_SOFTWAREVER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_PURCHASINGASSET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_BIOMEDICALASSET",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_OEMSITE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 45
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 45
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_VENDOR",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 45
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 45
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_COVERAGETYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_LOCKOUT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_PERSONALPROTECTIVEEQUIP",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_CONFINEDSPACE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_STATEMENTOFCOND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_BUILDMAINTPROGRAM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_HIPAACONFIDENTIALITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_OWNERSHIPTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_INVENTORYVERIFICATIONDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_PURCHASEORDER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_PURCHASEDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_PURCHASECOST",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_INSTALLDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_DISPOSALTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_ROOMTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_UNITTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_GUESTFIRSTNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 100
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 100
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_GUESTMIDDLENAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_GUESTLASTNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 100
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 100
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_VIPSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_MAXGUESTCOUNT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_PHONENUMBER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_KEYNUMBER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_ACCESSIBLE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_NONSMOKING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_SQFOOTAGE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_BEDCOUNT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 18,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 18,
+                "scale": 0
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_BATHCOUNT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_KITCHEN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_LIVINGROOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_OPENBAY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_BUILDING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_WING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_FLOOR",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_EXPOSURE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_XCOORDINATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_YCOORDINATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_ZCOORDINATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_UMDNSCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_FCICALCULATION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_GUESTSALUTATION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_GUESTPHONENUMBER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 50
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 50
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_EMAIL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_DRIVER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "T.B.D."
+        },
+        {
+            "name": "OBJ_UDFCHAR31",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR32",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR33",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR34",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR35",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR36",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR37",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR38",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR39",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR40",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR41",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR42",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR43",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR44",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR45",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFNUM06",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFNUM07",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFNUM08",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFNUM09",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFNUM10",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_NUMBER"
+        },
+        {
+            "name": "OBJ_UDFDATE06",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFDATE07",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFDATE08",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFDATE09",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFDATE10",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "User defined field of type Number",
+            "category": "UDF_DATE"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX06",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX07",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX08",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX09",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_UDFCHKBOX10",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "User defined field of type Checkbox",
+            "category": "UDF_CHECKBOX"
+        },
+        {
+            "name": "OBJ_FACILITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "The facility."
+        },
+        {
+            "name": "OBJ_COUNTRY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 10,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 10,
+                "scale": 0
+            },
+            "description": "The country."
+        },
+        {
+            "name": "OBJ_TARGETPOWERFACTOR",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 7,
+                "scale": 4
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 7,
+                "scale": 4
+            },
+            "description": "The target poer factor."
+        },
+        {
+            "name": "OBJ_TARGETPEAKDEMAND",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The target peak demand."
+        },
+        {
+            "name": "OBJ_STARTBILLINGPERIOD",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Start Billing Period"
+        },
+        {
+            "name": "OBJ_BILLEVERYPERIOD",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 5,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 5,
+                "scale": 0
+            },
+            "description": "Bill every periods"
+        },
+        {
+            "name": "OBJ_BILLEVERYPERIODUOM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 10
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 10
+            },
+            "description": "Bill every periods Unit Of Measure."
+        },
+        {
+            "name": "OBJ_EFFLOSSPHASEIMBALANCE1",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 7,
+                "scale": 4
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 7,
+                "scale": 4
+            },
+            "description": "The eEfficiency Loss At 1% Phase Imbalance."
+        },
+        {
+            "name": "OBJ_EFFLOSSPHASEIMBALANCE2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 7,
+                "scale": 4
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 7,
+                "scale": 4
+            },
+            "description": "The efficiency Loss At 2% Phase Imbalance."
+        },
+        {
+            "name": "OBJ_EFFLOSSPHASEIMBALANCE3",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 7,
+                "scale": 4
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 7,
+                "scale": 4
+            },
+            "description": "The efficiency Loss At 3% Phase Imbalance."
+        },
+        {
+            "name": "OBJ_EFFLOSSPHASEIMBALANCE4",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 7,
+                "scale": 4
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 7,
+                "scale": 4
+            },
+            "description": "The efficiency Loss At 4% Phase Imbalance."
+        },
+        {
+            "name": "OBJ_EFFLOSSPHASEIMBALANCE5",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 7,
+                "scale": 4
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 7,
+                "scale": 4
+            },
+            "description": "The efficiency Loss At 5% Phase Imbalance."
+        },
+        {
+            "name": "OBJ_PERFORMANCEMANAGER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The performance manager."
+        },
+        {
+            "name": "OBJ_ELECSUBMETERINTERVAL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 10,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 10,
+                "scale": 0
+            },
+            "description": "The electric Sub-meter interval."
+        },
+        {
+            "name": "OBJ_ELECUSAGETHRESHOLD",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The electric usage threshold."
+        },
+        {
+            "name": "OBJ_SAFETYREVIEWREQUIRED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Flag to indicate whether a safety review is required."
+        },
+        {
+            "name": "OBJ_SAFETYREVIEWED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Date of safety reviewed signature."
+        },
+        {
+            "name": "OBJ_SAFETYREVIEWEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "User of safety reviewed signature."
+        },
+        {
+            "name": "OBJ_SAFETYREVIEWEDNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Name of the user of safety reviewed signature."
+        },
+        {
+            "name": "OBJ_SAFETYREVIEWEDTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Type of safety reviewed signature."
+        },
+        {
+            "name": "OBJ_PERMITREVIEWREQUIRED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Flag to indicate whether a permit review is required."
+        },
+        {
+            "name": "OBJ_PERMITREVIEWED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Date of permit reviewed signature."
+        },
+        {
+            "name": "OBJ_PERMITREVIEWEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "User of permit reviewed signature."
+        },
+        {
+            "name": "OBJ_PERMITREVIEWEDNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Name of the user of permit reviewed signature."
+        },
+        {
+            "name": "OBJ_PERMITREVIEWEDTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Type of permit reviewed signature."
+        },
+        {
+            "name": "OBJ_LOTOREVIEWREQUIRED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Flag to indicate whether a loto review is required."
+        },
+        {
+            "name": "OBJ_LOTOREVIEWED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "Date of loto reviewed signature."
+        },
+        {
+            "name": "OBJ_LOTOREVIEWEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "User of loto reviewed signature."
+        },
+        {
+            "name": "OBJ_LOTOREVIEWEDNAME",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "Name of the user of loto reviewed signature."
+        },
+        {
+            "name": "OBJ_LOTOREVIEWEDTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "Type of lott reviewed signature."
+        },
+        {
+            "name": "OBJ_COMPLOCATION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "The component location of the equipment."
+        },
+        {
+            "name": "OBJ_ORIGCONFIGCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The equipment configuration used to create the equipment."
+        },
+        {
+            "name": "OBJ_ORIGCONFIGORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The organization of the equipment configuration.used to create the equipment."
+        },
+        {
+            "name": "OBJ_ORIGCONFIGREV",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 4,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 4,
+                "scale": 0
+            },
+            "description": "The equipment configuration revision."
+        },
+        {
+            "name": "OBJ_ORIGOBJECT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The equipment code related to the equipment configuration used to create the equipment"
+        },
+        {
+            "name": "OBJ_CONFIGCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The equipment configuration code."
+        },
+        {
+            "name": "OBJ_CONFIGREVISION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 4,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 4,
+                "scale": 0
+            },
+            "description": "The revision of the equipment configuration."
+        },
+        {
+            "name": "OBJ_CONFIGSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The user status of the equipment configuration."
+        },
+        {
+            "name": "OBJ_CONFIGRSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The system status of the equipment configuration."
+        },
+        {
+            "name": "OBJ_CONFIGTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The equipment user type to use when creating new equipment."
+        },
+        {
+            "name": "OBJ_CONFIGSPECIFIC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Flag to indicate whether all equipment should be created in a specific organization."
+        },
+        {
+            "name": "OBJ_CONFIGPREFIX",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The prefix to use when building the code of the new equipment."
+        },
+        {
+            "name": "OBJ_CONFIGSUFFIX",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The suffix to use when building the code of the new equipment."
+        },
+        {
+            "name": "OBJ_CONFIGSEQLENGTH",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 2,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 2,
+                "scale": 0
+            },
+            "description": "The number of digits, between prefix and suffix, to use when building the code of the new equipment."
+        },
+        {
+            "name": "OBJ_CONFIGAUTONUM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Flag to indicate whether new equipment should be automatically numbered/coded."
+        },
+        {
+            "name": "OBJ_CONFIGSTWO",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "The standard work order to use when creating the commissioning work order."
+        },
+        {
+            "name": "OBJ_CONFIGREQUESTED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The date the equipment configuration was requested."
+        },
+        {
+            "name": "OBJ_CONFIGREQUESTEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "The user who requested the new equipment configuration."
+        },
+        {
+            "name": "OBJ_CONFIGAPPROVED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The date the equipment configuration was approved."
+        },
+        {
+            "name": "OBJ_CONFIGAPPROVEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "The user who approved the equipment configuration."
+        },
+        {
+            "name": "OBJ_CREATED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "record creation timestamp"
+        },
+        {
+            "name": "OBJ_CREATEDBY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "user who created this record"
+        },
+        {
+            "name": "OBJ_CONFIGREVISIONREASON",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 2000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 2000
+            },
+            "description": "The reason of the new equipment configuration revision."
+        },
+        {
+            "name": "OBJ_CONFIGDEFAULTSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The default status to use when creating equipment."
+        },
+        {
+            "name": "OBJ_RCMLEVEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The level of Reliability Centered Maintenance"
+        },
+        {
+            "name": "OBJ_RISKLEVEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The risk level of the equipment"
+        },
+        {
+            "name": "OBJ_RPN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The Risk priority Number of the equipment"
+        },
+        {
+            "name": "OBJ_VEHICLETYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The vehicle type of the equipment"
+        },
+        {
+            "name": "OBJ_LINEARCOSTWEIGHT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 6,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 6,
+                "scale": 0
+            },
+            "description": "The linear cost weight of the system"
+        },
+        {
+            "name": "OBJ_INSPECTIONDIRECTION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The inspection direction of the equipment"
+        },
+        {
+            "name": "OBJ_FLOW",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The flow of the equipment"
+        },
+        {
+            "name": "OBJ_ORIGINALRECEIPTDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The original receipt date of the equipment"
+        },
+        {
+            "name": "OBJ_LATESTRECEIPTDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The latest receipt date of the equipment"
+        },
+        {
+            "name": "OBJ_ORIGINALINSTALLDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The original install date of the equipment"
+        },
+        {
+            "name": "OBJ_LATESTINSTALLDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The latest install date of the equipment"
+        },
+        {
+            "name": "OBJ_OPERATIONALSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The operational status of the equipment"
+        },
+        {
+            "name": "OBJ_OPERATIONALRSTATUS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The operational system status of the equipment"
+        },
+        {
+            "name": "OBJ_LOANEDDEPT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The department used in case of vehicle loaners"
+        },
+        {
+            "name": "OBJ_WODEPT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The department used in case of normal work orders"
+        },
+        {
+            "name": "OBJ_PMWODEPT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The department used in case of preventive maintenance"
+        },
+        {
+            "name": "OBJ_DOCUMOTO_BOOKID",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 100
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 100
+            },
+            "description": "The documoto bookid of the equipment"
+        },
+        {
+            "name": "OBJ_GUESTPROFILEID",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 30,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 30,
+                "scale": 0
+            },
+            "description": "The guest profile ID."
+        },
+        {
+            "name": "OBJ_MANAGERPROFILEID",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 20
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 20
+            },
+            "description": "The manager profile ID"
+        },
+        {
+            "name": "OBJ_RESCALOWNER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 255
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 255
+            },
+            "description": "Reservation calendar owner"
+        },
+        {
+            "name": "OBJ_WORKSPACE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The workspace."
+        },
+        {
+            "name": "OBJ_CONFIGUSEPARENTCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Flag to indicate whether the child code should include the parent code."
+        },
+        {
+            "name": "OBJ_CONFIGPARENTSEPARATOR",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 3
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 3
+            },
+            "description": "Separator to use in case the child code needs to have the parent code included"
+        },
+        {
+            "name": "OBJ_IMAGEURL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1000
+            },
+            "description": "The image URL."
+        },
+        {
+            "name": "OBJ_PRIMARYSYSTEM",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The primary system of the equipment."
+        },
+        {
+            "name": "OBJ_PRIMARYSYSTEM_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The organization of the primary system of the equipment."
+        },
+        {
+            "name": "OBJ_CONDITIONINDEX",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The condition index of the equipment."
+        },
+        {
+            "name": "OBJ_CONDITIONSCORE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The condition score of the equipment."
+        },
+        {
+            "name": "OBJ_LINEAROBJTYPE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The linear object type (right of way/route/segment) of the equipment."
+        },
+        {
+            "name": "OBJ_DIRECTION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The direction (north/south) of the equipment."
+        },
+        {
+            "name": "OBJ_FROMPOINT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The from point of the equipment."
+        },
+        {
+            "name": "OBJ_TOPOINT",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The to point of the equipment."
+        },
+        {
+            "name": "OBJ_RESCALOWNERLIST",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The reservation calendar owners list."
+        },
+        {
+            "name": "OBJ_CHECKLISTFILTER",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 500
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 500
+            },
+            "description": "Equipment attributes that determine if certain checklist items are relevant or not"
+        },
+        {
+            "name": "OBJ_TOLERANCE_SIZE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "Equipment size that determines which tolerance record is applicable"
+        },
+        {
+            "name": "OBJ_MNBDEFINITION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 4
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 4
+            },
+            "description": "The mobile notebook definition of the equipment."
+        },
+        {
+            "name": "OBJ_UDFNOTE01",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 2000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 2000
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_NOTE"
+        },
+        {
+            "name": "OBJ_UDFNOTE02",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 2000
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 2000
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_NOTE"
+        },
+        {
+            "name": "OBJ_LASTSAVED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime2"
+            },
+            "description": "Timestamp of last update"
+        },
+        {
+            "name": "OBJ_FUEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The fuel of the equipment."
+        },
+        {
+            "name": "OBJ_RISKPRIORITYINDEX",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The risk priority index of the equipment"
+        },
+        {
+            "name": "OBJ_CRITICALITYSCORE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The criticality score of the equipment."
+        },
+        {
+            "name": "OBJ_CORRCONDITIONSCORE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The score of the corrective condition."
+        },
+        {
+            "name": "OBJ_CORRCONDITIONREASON",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The reason of the corrective condition."
+        },
+        {
+            "name": "OBJ_CORRCONDITIONDATE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The date of the corrective condition."
+        },
+        {
+            "name": "OBJ_CORRCONDITIONUSAGE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The usage of the corrective condition."
+        },
+        {
+            "name": "OBJ_ENDUSEFULLIFE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The end useful life date of the equipment."
+        },
+        {
+            "name": "OBJ_SERVICELIFEUSAGE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The expected total usage during its service life"
+        },
+        {
+            "name": "OBJ_PROFILEPICTURE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The profile picture of the equipment"
+        },
+        {
+            "name": "OBJ_RISKCONSEQUENCECOST",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The risk consequence cost of the equipment"
+        },
+        {
+            "name": "OBJ_FAILUREPROBPERCENTAGE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 5,
+                "scale": 2
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 5,
+                "scale": 2
+            },
+            "description": "The failure probability percentage of the equipment."
+        },
+        {
+            "name": "OBJ_BLACKSWAN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Flag to indicate whether the equipment is a black swan."
+        },
+        {
+            "name": "OBJ_BLACKSWANCOST",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The black swan cost of the equipment."
+        },
+        {
+            "name": "OBJ_PERFORMANCEFORMULA",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The performance formula of the equipment"
+        },
+        {
+            "name": "OBJ_PERFORMANCEFORMULA_ORG",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 15
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 15
+            },
+            "description": "The performance formula organization of the equipment"
+        },
+        {
+            "name": "OBJ_PERFORMANCE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "The performance of the equipment"
+        },
+        {
+            "name": "OBJ_PERFORMANCELASTUPDATED",
+            "nullable": true,
+            "oracle": {
+                "datatype": "DATE"
+            },
+            "sqlserver": {
+                "datatype": "datetime"
+            },
+            "description": "The date the equipment performance was last updated"
+        },
+        {
+            "name": "OBJ_CONDITIONRATING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "The condition rating of the equipment."
+        },
+        {
+            "name": "OBJ_CAPACITYCODE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "The capacity code of the equipment."
+        },
+        {
+            "name": "OBJ_AVAILABLECAPACITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The available capacity of the equipment."
+        },
+        {
+            "name": "OBJ_DESIREDCAPACITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The desired capacity of the equipment."
+        },
+        {
+            "name": "OBJ_CAPACITYRATING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "The capacity rating of the equipment."
+        },
+        {
+            "name": "OBJ_NUMBEROFFAILURES",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 18,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 18,
+                "scale": 0
+            },
+            "description": "The number of failures of the equipment"
+        },
+        {
+            "name": "OBJ_MTBFDAYS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The MTBF days of the equipment."
+        },
+        {
+            "name": "OBJ_MTBFRATING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "The MTBF rating of the equipment."
+        },
+        {
+            "name": "OBJ_MUBF",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The Mean Usage Between Failures of the equipment."
+        },
+        {
+            "name": "OBJ_MUBFRATING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "The Mean Usage Between Failures rating of the equipment."
+        },
+        {
+            "name": "OBJ_MTTRHRS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "To mean time to repair (hours) of the equipment."
+        },
+        {
+            "name": "OBJ_MTTRRATING",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "The mean time to repair rating of the equipment."
+        },
+        {
+            "name": "OBJ_VARIABLERESULT1",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "One of six variable results"
+        },
+        {
+            "name": "OBJ_VARIABLERATING1",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "One of six variable ratings"
+        },
+        {
+            "name": "OBJ_VARIABLERESULT2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "One of six variable results"
+        },
+        {
+            "name": "OBJ_VARIABLERATING2",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "One of six variable ratings"
+        },
+        {
+            "name": "OBJ_VARIABLERESULT3",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "One of six variable results"
+        },
+        {
+            "name": "OBJ_VARIABLERATING3",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "One of six variable ratings"
+        },
+        {
+            "name": "OBJ_VARIABLERESULT4",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "One of six variable results"
+        },
+        {
+            "name": "OBJ_VARIABLERATING4",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "One of six variable ratings"
+        },
+        {
+            "name": "OBJ_VARIABLERESULT5",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "One of six variable results"
+        },
+        {
+            "name": "OBJ_VARIABLERATING5",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "One of six variable ratings"
+        },
+        {
+            "name": "OBJ_VARIABLERESULT6",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "One of six variable results"
+        },
+        {
+            "name": "OBJ_VARIABLERATING6",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 9,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 9,
+                "scale": 6
+            },
+            "description": "One of six variable ratings"
+        },
+        {
+            "name": "OBJ_SCHEMATIC",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 8
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 8
+            },
+            "description": "Flag to indicate whether the equipment is schematic"
+        },
+        {
+            "name": "OBJ_UNMITIGATED_RISKLEVEL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The unmitigated risk level of the equipment"
+        },
+        {
+            "name": "OBJ_UNMITIGATED_RPN",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 24,
+                "scale": 6
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 24,
+                "scale": 6
+            },
+            "description": "The unmitigated risk priority of the equipment"
+        },
+        {
+            "name": "OBJ_UDFCHAR46",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR47",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR48",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR49",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR50",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR51",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR52",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR53",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR54",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_UDFCHAR55",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 80
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 80
+            },
+            "description": "User defined field of type Char",
+            "category": "UDF_CHAR"
+        },
+        {
+            "name": "OBJ_SEGMENTVALUE",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The segment value of the equipment"
+        },
+        {
+            "name": "OBJ_DEVICETOLFROM_DECIMALS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 2,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 2,
+                "scale": 0
+            },
+            "description": "The number of decimals to use when specifying the from device tolerance."
+        },
+        {
+            "name": "OBJ_DEVICETOLTO_DECIMALS",
+            "nullable": true,
+            "oracle": {
+                "datatype": "NUMBER",
+                "precision": 2,
+                "scale": 0
+            },
+            "sqlserver": {
+                "datatype": "numeric",
+                "precision": 2,
+                "scale": 0
+            },
+            "description": "The number of decimals to use when specifying the to device tolerance."
+        },
+        {
+            "name": "OBJ_EQUIPMENTREVISION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The equipment revision that was last used to update the equipment."
+        },
+        {
+            "name": "OBJ_REVISIONCTRL",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 1
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 1
+            },
+            "description": "Flag to indicate whether the equipment should fall under revision control."
+        },
+        {
+            "name": "OBJ_BATCHEQUIPMENTREVISION",
+            "nullable": true,
+            "oracle": {
+                "datatype": "VARCHAR2",
+                "length": 30
+            },
+            "sqlserver": {
+                "datatype": "nvarchar",
+                "length": 30
+            },
+            "description": "The batch equipment revision used to update the equipment."
+        },
+        {
+            "name": "OBJ_SQLIDENTITY",
+            "nullable": true,
+            "oracle": {
+                "datatype": "int"
+            },
+            "sqlserver": {
+                "datatype": "int",
+                "identity": true
+            },
+            "description": "Identity column for SQL Server",
+            "is_identity": true
+        }
+    ]
+}
