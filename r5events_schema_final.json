@@ -107,23 +107,7 @@
             "oracle": {
                 "datatype": "VARCHAR2",
                 "length": 4
-            },{ "code": "*", "description": "Default work order type" },
-            { "code": "ADMIN", "description": "Administrative" },
-            { "code": "BR", "description": "Breakdown" },
-            { "code": "CAL", "description": "Calibration" },
-            { "code": "CM", "description": "Corrective Maintenance" },
-            { "code": "COM", "description": "Commissioning WO" },
-            { "code": "FCAL", "description": "Follow Up Calibration" },
-            { "code": "FCM", "description": "Follow Up Work Order" },
-            { "code": "IS", "description": "Direct Issue" },
-            { "code": "MEC", "description": "Multiple Equipment Child" },
-            { "code": "OPS", "description": "Operational Support" },
-            { "code": "PDM", "description": "Predictive Maintenance" },
-            { "code": "PM", "description": "Preventive Maintenance" },
-            { "code": "PMCAL", "description": "PM Calibration" },
-            { "code": "PROJ", "description": "Project" },
-            { "code": "RP", "description": "Repairable Spare" },
-            { "code": "ST", "description": "Standing WO" }
+            },
             "sqlserver": {
                 "datatype": "nvarchar",
                 "length": 4
